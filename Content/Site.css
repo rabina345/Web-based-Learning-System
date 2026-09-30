@@ -1,0 +1,91 @@
+﻿/* ===== External CSS — site.css ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    margin: 0;
+    color: #222;
+    background: #fafafa;
+}
+
+header {
+    background: #2b0a4d;
+    color: #fff;
+    padding: 12px 24px;
+}
+
+    header a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    header nav a {
+        margin-right: 14px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        margin: 6px 0;
+        font-size: 22px;
+    }
+
+main {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+footer {
+    background: #2b0a4d;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+    font-size: 13px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    background: #fff;
+}
+
+    .card h3 a {
+        color: #2b0a4d;
+        text-decoration: none;
+    }
+
+table, .gridview {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+input[type=text], input[type=password], input[type=email], textarea, select {
+    width: 100%;
+    max-width: 320px;
+    padding: 6px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+input[type=submit], button, .btn {
+    background: #2b0a4d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Skill_Core.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title><%: Page.Title %> - SkillCore</title>
+    <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Content/site.css") %>" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <a href="<%= ResolveUrl("~/Default.aspx") %>"><strong>SkillCore</strong></a>
+
+<asp:Literal ID="litGreeting" runat="server" Visible="false" />
+<h1>Welcome to SkillCore</h1>
+
+<nav>
+                <a href="<%= ResolveUrl("~/Default.aspx") %>">Home</a>
+                <a href="<%= ResolveUrl("~/Pages/Courses.aspx") %>">Courses</a>
+                <a href="<%= ResolveUrl("~/Pages/Contact.aspx") %>">Contact</a>
+
+                <asp:PlaceHolder ID="phGuest" runat="server">
+                    <a href="<%= ResolveUrl("~/Account/Login.aspx") %>">Login</a>
+                    <a href="<%= ResolveUrl("~/Account/Register.aspx") %>">Register</a>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
+                    <a href="<%= ResolveUrl("~/Member/Dashboard.aspx") %>">My Dashboard</a>
+                    <asp:PlaceHolder ID="phAdminLink" runat="server" Visible="false">
+                        <a href="<%= ResolveUrl("~/Admin/Dashboard.aspx") %>">Admin</a>
+                    </asp:PlaceHolder>
+                    <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                    <a href="<%= ResolveUrl("~/Member/AllPortfolios.aspx") %>">Browse Portfolios</a>
+                </asp:PlaceHolder>
+            </nav>
+        </header>
+
+        <main>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <footer>
+            <p>&copy; 2026 SkillCore</p>
+        </footer>
+    </form>
+</body>
+</html>
